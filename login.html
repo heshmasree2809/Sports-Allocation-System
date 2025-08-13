@@ -83,6 +83,23 @@
     </style>
 </head>
 <body>
+createModal({
+  title: 'Detailed Reports',
+  htmlContent: `
+    <div class="report-section">
+      <h4>📊 Bookings per Sport</h4>
+      <ul class="report-list">${sportList}</ul>
+    </div>
+    <div class="report-section">
+      <h4>🏟 Upcoming Events</h4>
+      <ul class="report-list">${eventsList}</ul>
+    </div>
+    <div class="report-section">
+      <h4>👥 Registered Participants</h4>
+      <ul class="report-list">${participants}</ul>
+    </div>
+  `
+});
 
     <!-- Login Container -->
     <div class="login-container fade-up">
