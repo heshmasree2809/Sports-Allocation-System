@@ -362,3 +362,74 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 221, 87, 0.6);
 }
+/* ===== Modal Styles ===== */
+.sas-modal-overlay {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.sas-modal {
+  animation: popIn 0.25s ease-out forwards;
+  font-family: inherit;
+}
+
+.sas-modal button {
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.sas-modal button:hover {
+  background: #ffcc33 !important;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Make modal scrollable on very small screens */
+@media (max-width: 500px) {
+  .sas-modal {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+/* ===== Detailed Reports Modal Styling ===== */
+.report-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffdd57;
+}
+
+.report-section h4 {
+  margin-bottom: 8px;
+  color: #ffdd57;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 4px;
+}
+
+.report-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.report-list li {
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.report-list li:hover {
+  background: rgba(255, 221, 87, 0.15);
+  transform: translateX(4px);
+}
